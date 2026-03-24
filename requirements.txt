@@ -1,0 +1,11 @@
+matplotlib
+numpy
+opencv-python
+pandas
+Pillow
+pycryptodome
+scikit-learn
+scipy
+flask
+# pip install pycryptodome
+# pip install Pillow

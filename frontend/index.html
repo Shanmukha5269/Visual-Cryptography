@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Cryptography Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visual Cryptography Tool</h1>
+        </header>
+
+        <div class="mode-selection">
+            <button id="encrypt-btn" class="mode-btn active">Encrypt</button>
+            <button id="decrypt-btn" class="mode-btn">Decrypt</button>
+        </div>
+
+        <div id="encrypt-section" class="section active">
+            <div class="card">
+                <h2>Encrypt Image</h2>
+                <div class="form-group">
+                    <label for="encrypt-file">Select Image:</label>
+                    <input type="file" id="encrypt-file" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="shares-select">Number of Shares:</label>
+                    <select id="shares-select">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <button id="encrypt-btn-action" class="action-btn">Encrypt Image</button>
+            </div>
+        </div>
+
+        <div id="decrypt-section" class="section">
+            <div class="card">
+                <h2>Decrypt Image</h2>
+                <div class="form-group">
+                    <label for="decrypt-files">Select Share Images:</label>
+                    <input type="file" id="decrypt-files" accept="image/*" multiple required>
+                </div>
+                <div class="form-group">
+                    <label for="decrypt-shares-select">Number of Shares:</label>
+                    <select id="decrypt-shares-select">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <button id="decrypt-btn-action" class="action-btn">Decrypt Image</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h2>Results</h2>
+            <div id="image-grid" class="image-grid"></div>
+            <div id="metrics" class="metrics hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
